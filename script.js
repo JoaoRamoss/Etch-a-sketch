@@ -17,9 +17,8 @@ function buttonPress(e) {
 }
 
 function updateSelectedBtn(e) {
-    buttons.forEach(button => button.classList.remove('selected'));
-    e.target.classList.add('selected');
-    if (e.target.id == 'clear') {
-        e.target.classList.remove('selected');
+    if (e.target.id !== 'clear') {
+        buttons.forEach(button => button.classList.remove('selected'));
+        e.target.classList.add('selected');
     }
 }
