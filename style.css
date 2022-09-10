@@ -16,7 +16,7 @@ header h1{
 }
 
 .options {
-    margin-left: 120px;
+    margin-left: 230px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -43,7 +43,7 @@ button.selected {
     margin: 1 auto;
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 200px;
 }
 
 .grid {
