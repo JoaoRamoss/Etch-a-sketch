@@ -28,6 +28,7 @@ button {
     border-radius: 15px;
     border: 1px solid #333333;
     font-weight: 100;
+    cursor: pointer;
 }
 
 .container {
