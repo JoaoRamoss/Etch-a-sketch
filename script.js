@@ -1,8 +1,10 @@
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.modeSel');
 buttons.forEach(button => button.addEventListener('mouseover', hoverIn));
 buttons.forEach(button => button.addEventListener('mouseout', hoverOut));
 buttons.forEach(button => button.addEventListener('click', buttonPress));
 
+const dimensions = document.querySelectorAll('.dim');
+dimensions.forEach(dim => dim.addEventListener('click', dimPress));
 
 function hoverIn(e) {
     e.target.setAttribute("style", "scale: 1.1");
@@ -18,17 +20,42 @@ function buttonPress(e) {
         grid.innerHTML = '';
         createGrid(current_size);
     }
-    else{
+    else if (e.target.className !== 'dim'){
         current_mode = e.target.id;
     }
 }
 
 
+function dimPress(e) {
+    updateDimButton(e);
+    switch(e.target.id) {
+        case 'small':
+            current_size = 16;
+            break;
+        case 'medium': 
+            current_size = 32;
+            break;
+        case 'large':
+            current_size = 64;
+            break;
+        case 'xLarge':
+            current_size = 128;
+            break;
+    }
+    grid.innerHTML = '';
+    createGrid(current_size);
+}
+
 function updateSelectedBtn(e) {
-    if (e.target.id !== 'clear') {
+    if (e.target.id !== 'clear' && e.target.className !== 'dim') {
         buttons.forEach(button => button.classList.remove('selected'));
         e.target.classList.add('selected');
     }
+}
+
+function updateDimButton(e) {
+    dimensions.forEach(dim => dim.classList.remove('selected'));
+    e.target.classList.add('selected')
 }
 
 function changeColor(e) {

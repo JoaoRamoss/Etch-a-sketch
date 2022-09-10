@@ -38,6 +38,7 @@ button.selected {
     color: #ededed;
 }
 
+
 .container {
     padding: 30px;
     margin: 1 auto;
@@ -52,4 +53,8 @@ button.selected {
     height: 500px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dimensions {
+    text-align: center;
 }
