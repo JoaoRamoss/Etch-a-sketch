@@ -5,6 +5,8 @@ buttons.forEach(button => button.addEventListener('click', buttonPress));
 
 const dimensions = document.querySelectorAll('.dim');
 dimensions.forEach(dim => dim.addEventListener('click', dimPress));
+dimensions.forEach(dim => dim.addEventListener('mouseover', hoverIn));
+dimensions.forEach(dim => dim.addEventListener('mouseout', hoverOut));
 
 function hoverIn(e) {
     e.target.setAttribute("style", "scale: 1.1");
