@@ -8,6 +8,28 @@ dimensions.forEach(dim => dim.addEventListener('click', dimPress));
 dimensions.forEach(dim => dim.addEventListener('mouseover', hoverIn));
 dimensions.forEach(dim => dim.addEventListener('mouseout', hoverOut));
 
+
+function addHelp() {
+    const text = document.querySelector('.helpText');
+    const p1 = document.createElement('p');
+    p1.textContent = "You can paint the canvas by pressing your mouse button and drawing over it.";
+
+    const p2 = document.createElement('p');
+    p2.textContent = "Feel free to press the \"Rainbow Mode\" button for a colorful surprise! ;)";
+
+    const p3 = document.createElement('p');
+    p3.textContent = "You can also change the canvas resolution by pressing the buttons under it.";
+
+    text.appendChild(p1);
+    text.appendChild(p2);
+    text.appendChild(p3);
+    help.removeEventListener('click', addHelp);
+}
+
+const help = document.querySelector('.help');
+help.addEventListener('click', addHelp);
+
+
 function hoverIn(e) {
     e.target.setAttribute("style", "scale: 1.1");
 }
@@ -61,7 +83,6 @@ function updateDimButton(e) {
 }
 
 function changeColor(e) {
-    console.log("change color");
     if (e.type === 'mouseover' && !isMouseDown) return;
     if (current_mode === 'colorMode') {
         console.log(e.target);
