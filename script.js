@@ -85,15 +85,18 @@ function updateDimButton(e) {
 function changeColor(e) {
     if (e.type === 'mouseover' && !isMouseDown) return;
     if (current_mode === 'colorMode') {
-        console.log(e.target);
+        current_color = '#333333';
         e.target.style.backgroundColor = current_color;
-        console.log(e.target);
     }
     else if (current_mode === 'rainbowMode') {
         const randomR = Math.floor(Math.random() * 256);
         const randomG = Math.floor(Math.random() * 256);
         const randomB = Math.floor(Math.random() * 256);
         e.target.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`;
+    }
+    else if (current_mode === 'eraser') {
+        current_color = 'white';
+        e.target.style.backgroundColor = current_color;
     }
 }
 //------------------- GRID --------------------//
