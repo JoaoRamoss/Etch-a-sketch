@@ -107,7 +107,7 @@ footer {
     font-weight: 300;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 850px) {
     .container {
         justify-content: center;
         flex-direction: column;
