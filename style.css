@@ -88,6 +88,7 @@ footer {
     text-align: center;
     color:#333333;
     margin: auto;
+    padding: 20px 10px;
     font-weight: 300;
     transition-duration: .1s;
     transition-timing-function: ease-in-out;
