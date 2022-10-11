@@ -86,13 +86,16 @@ button.selected {
 
 footer {
     text-align: center;
-    color:#ededed;
+    color:#333333;
     font-weight: 300;
-    background-color: #333333;
-    padding: 20px 0px;
-    margin-top: auto;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
 }
 
+footer:hover {
+    font-size: large;
+    transition-timing-function: ease-in-out;
+}
 .wrapper {
     display: flex;
     align-items: center;
@@ -126,6 +129,11 @@ footer {
         height: 40px;
         font-size: 15px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
 }
 
 @media (max-width: 530px) {
