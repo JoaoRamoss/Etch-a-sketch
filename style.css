@@ -87,6 +87,7 @@ button.selected {
 footer {
     text-align: center;
     color:#333333;
+    margin: auto;
     font-weight: 300;
     transition-duration: .1s;
     transition-timing-function: ease-in-out;
